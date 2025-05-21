@@ -56,6 +56,9 @@ runs:
           GRYPE_FORMAT="table"
         fi
         echo "GRYPE_FORMAT=$GRYPE_FORMAT" >> $GITHUB_OUTPUT
+        
+    - run: ls -al ${GITHUB_WORKSPACE}
+      shell: bash
 
     - name: Scan image
       id: grypescan
